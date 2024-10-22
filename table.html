@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>sno</th>
+                <th>name</th>
+                <th>age</th>
+            </tr>
+        </thead>
+        <tbody id="table">
+
+        </tbody>
+    </table>
+
+    <script>
+        let arr=Array({name:"thiru",age:20},
+        {name:"sai",age:30},
+        {name:"chandu",age:50}
+
+
+        );
+        let table=document.getElementById("table");
+
+        for(i=0;i<arr.length;i++){
+            let list=document.createElement('tr');
+         ///case1
+            let sno=document.createElement('td');
+             sno.innerText=i+1
+             list.appendChild(sno)
+        ///case2
+             let name=document.createElement('td');
+             name.innerText=arr[i].name
+             list.appendChild(name)
+
+         ///case3
+             let age=document.createElement('td') 
+                 age.innerText=arr[i].age
+                 list.appendChild(age)
+
+              table.appendChild(list)
+            }
+            
+            
+        
+
+        console.log(table)
+    </script>
+
+
+</body>
+
+</html>
